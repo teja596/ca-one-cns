@@ -1,0 +1,7 @@
+/* Style for containers*/
+#chat-root {
+  height: 800px;
+  width: 400px;
+  padding: 0.5%;
+  box-sizing: border-box;
+}
