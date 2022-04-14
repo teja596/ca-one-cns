@@ -1,4 +1,4 @@
-/* Style for containers*/
+/* style for containers*/
 #chat-root {
   height: 800px;
   width: 400px;
@@ -40,10 +40,10 @@
   box-sizing: border-box;
 }
 
-#input panel {
+#input-panel {
   height: 15%;
   width: 100%;
-  backgound-color: brown;
+  /*background-color: brown;*/
   box-sizing: border-box;
   padding: 2%;
   border-radius: 5px;
@@ -85,5 +85,6 @@
   padding: 2%;
   border-radius: 10px;
 }
+
 
   
