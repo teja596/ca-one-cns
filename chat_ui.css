@@ -2,6 +2,7 @@
 #chat-root {
   height: 800px;
   width: 400px;
+  background-color: #c5c5c5;
   padding: 0.5%;
   box-sizing: border-box;
 }
