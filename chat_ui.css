@@ -6,5 +6,84 @@
   padding: 0.5%;
   box-sizing: border-box;
 }
+
 #title-root {
+  height: 5%;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  padding: 2%;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: large;
+}
+
+#title-text {
+  height: 80%;
+  box-sizing: border-box;
+}
+
+#messages-root {
+  height: 80%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
+  background-color: #efefef;
+}
+
+#messages {
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+#input panel {
+  height: 15%;
+  width: 100%;
+  backgound-color: brown;
+  box-sizing: border-box;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+/*style for input elements*/
+#text-input {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+}
+
+#send-text {
+  width: 100%;
+  margin-top: 2%;
+  height: 40%;
+  box-sizing: border-box;
+}
+
+/*style for messages*/
+.other-message {
+  width: 90%;
+  float: left;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: #c0d0fa;
+  margin: 1%;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.self-message {
+  width: 90%;
+  float: right;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 1%;
+  background-color: #faf8c0;
+  padding: 2%;
+  border-radius: 10px;
+}
+
   
