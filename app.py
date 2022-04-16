@@ -14,37 +14,37 @@ from utility import generate_code,share_key,send_message,share_key_back
 
 app = Flask(__name__)
 
-#smtp setting
+#SMTP SETTING
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'xyz@gmail.com'
-app.config['MAIL_PASSWORD'] = 'app password'
+app.config['MAIL_USERNAME'] = 'xyz@gmail.com'  #TYPE GMAIL IN PLACE OF  xyz@gmail.com   
+app.config['MAIL_PASSWORD'] = 'app password' #TYPE THE PASSWORD IN PLACE OF app password
 #app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = True
 mail=Mail(app)
 
-#common stuff
+#COMMON STUFF
 email_code = None
 
-#data need for sending
+#DATA NEED FOR SENDING
 self_email = None
 public_key_self, private_key_self = rsa.newkeys(2048)
 self_url = None
 
-#data needed for receiving
+#DATA NEED FOR RECEIVING
 other_email = None
 other_url = None
 other_public_key = None
 auth = 'False'
 
-#list of messages (send/recv) chat
+#LIST OF MESSAGES (send/recv) CHAT
 messages = []
 
-#ports
+#PORTS
 port_A = None
 port_B = None
 
-#the user starts the application
+#THE USER STARTS THE APPLICATION
 @app.route("/",methods=['GET','POST'])
 def user_start():
     if request.method=='GET':
@@ -61,7 +61,7 @@ def user_start():
             return redirect(url_for('accept_conn'))
         return redirect(url_for('user_connect'))
 
-#user tries to connect to the remote application
+#USER TRIES TO CONNECT TO THE REMOTE APPLICATION
 @app.route("/connect/",methods=['GET','POST'])
 def user_connect():
     if request.method=='GET':
@@ -85,7 +85,7 @@ def user_connect():
         #other_public_key = pickle.loads(ret.text)
         return redirect(url_for('chat_ui'))
 
-#the endpoint for sender to receive public key
+#THE ENDPOINT FOR SENDER TO RECEIVE THE PUBLIC KEY
 @app.route("/sender/recv/",methods=['GET','POST'])
 def recv_key_sender():
     if request.method=='POST':
@@ -95,7 +95,7 @@ def recv_key_sender():
         other_public_key = public_key
         return pickle.dumps(public_key_self)
 
-#the endpoint to recv connection request (from the sender)
+#THE ENDPOINT TO RECEIVE CONNECTION (from the sender)
 @app.route("/connection/recv/",methods=['GET','POST'])
 def recv_conn():
     if request.method=='POST':
